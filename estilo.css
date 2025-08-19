@@ -14,16 +14,6 @@ h1 {
     color: black;
     margin: 0;
 }
-.tabuleiro {
-    display: grid;
-    grid-template-columns: repeat(7, 50px);
-    grid-template-rows: repeat(7, 50px);
-    gap: 5px;
-    background-color: darkkhaki;
-    padding: 20px;            
-    border-radius: 10px;      
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
 
 
 .posicao {
@@ -47,13 +37,24 @@ h1 {
 
 
 .posicao[data-tipo="peca"] {
-    background-color: forestgreen;
+    background-color: rgb(15, 99, 4);
     border: 2px solid black;
     cursor: pointer;
 }
 
 .posicao[data-tipo="peca"].selecionada {
-    background-color: #f0e68c; /* Cor de destaque (Khaki) */
-    transform: scale(1.1); /* Aumenta um pouco de tamanho */
-    box-shadow: 0 0 15px #f0e68c; /* Adiciona um brilho */
+    background-color: rgb(15, 99, 4);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #eeede59d; 
+}
+
+.Mesa {
+    display: grid;
+    grid-template-columns: repeat(7, 50px);
+    grid-template-rows: repeat(7, 50px);
+    gap: 5px;
+    background-color: darkkhaki;
+    padding: 20px;            
+    border-radius: 10px;      
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
