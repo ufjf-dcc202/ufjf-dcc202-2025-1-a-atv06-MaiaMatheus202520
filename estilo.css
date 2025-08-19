@@ -1,0 +1,59 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+    gap: 30px;
+}
+
+
+h1 {
+    color: black;
+    margin: 0;
+}
+.tabuleiro {
+    display: grid;
+    grid-template-columns: repeat(7, 50px);
+    grid-template-rows: repeat(7, 50px);
+    gap: 5px;
+    background-color: darkkhaki;
+    padding: 20px;            
+    border-radius: 10px;      
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.posicao {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+
+.posicao[data-tipo="invalido"] {
+    background-color: transparent;
+    border: none;
+}
+
+
+.posicao[data-tipo="vazio"] {
+    background-color: lightgreen;
+    border: 2px dashed black;
+}
+
+
+.posicao[data-tipo="peca"] {
+    background-color: forestgreen;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.posicao[data-tipo="peca"].selecionada {
+    background-color: #f0e68c; /* Cor de destaque (Khaki) */
+    transform: scale(1.1); /* Aumenta um pouco de tamanho */
+    box-shadow: 0 0 15px #f0e68c; /* Adiciona um brilho */
+}
